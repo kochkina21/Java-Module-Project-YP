@@ -14,14 +14,15 @@ public class Main {
             name = scanner.next();
 
             while (true) {
-                System.out.println("Введите скорость автомобиля №" + i + " от 0 до 250 км/ч");
                 if (scanner.hasNextInt()) {
                     speed = scanner.nextInt();
                     if (speed > 0 && speed <= 250) {
                         break;
                     }
                 } else {
-                    System.out.println("Введите целочисленное значение скорости");
+                    System.out.println("Ошибка! Скорость должна быть от 0 до 250 км/ч.");
+                } else {
+                    System.out.println("Ошибка! Скорость должна быть целочисленным значением.");
                 }
             }
 
